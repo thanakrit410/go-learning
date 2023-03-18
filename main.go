@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"unicode/utf8"
 )
 
 func main() {
@@ -37,6 +38,28 @@ func main() {
 	list = append(list, 4)
 	y_lenX := len(list)
 	fmt.Printf("\n %#v", list)
-	fmt.Printf("\n %#v", y_lenX)
+	fmt.Printf("\n %#v\n", y_lenX)
+	name := "abc"
+	println(" len name =", len(name))
+	password := "191144zs"
+	//and slide
+	//index
 
+	slide := []int{10, 20, 30, 40, 50, 60, 70, 80, 90}
+	println(utf8.RuneCountInString(password))
+	//want slide index 1 and lested
+	fmt.Printf("%#v\n", slide[1:])
+	//want output slide index 0 into 7
+	fmt.Printf("%#v\n", slide[0:7])
+	// using map
+	countries := map[string]string{}
+	countries["th"] = "Thailand"
+	countries["en"] = "United State"
+
+	println(countries["th"])
+	//using map get well
+
+	map_x,map_y := 10,20
+
+	
 }
