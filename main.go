@@ -115,6 +115,36 @@ func main() {
 	// calls package custom
 	println(customer.Hello())
 
+	// pass values between variables
+
+	frist := 10
+	second := frist
+
+	// check values
+
+	second = 20
+	println(frist, second)
+
+	// go pointer
+	var x_pointer, y_pointer int
+	x_pointer = 10
+	y_pointer = x_pointer
+	fmt.Println(&x_pointer)
+	fmt.Println(&y_pointer)
+	// add pointer to variables
+	var z_pointer *int
+	z_pointer = &x_pointer
+	fmt.Println(z_pointer)
+	// display variables z_pointer
+	fmt.Println(*z_pointer)
+	//add new valus  to z_pointer
+	*z_pointer = 20
+	// and doing x_pointer new valus
+	fmt.Println(*&x_pointer)
+	// using result function
+	results(&x_pointer)
+	fmt.Println(*&x_pointer)
+
 }
 func cal(f func(int, int) int) {
 	sum := f(50, 10)
@@ -149,4 +179,13 @@ func valadic(a ...int) int {
 		s += v
 	}
 	return s
+}
+func results(re *int) {
+	a := 20
+	b := 10
+	*re = a + b
+}
+
+func results2(re2 *int) {
+
 }
