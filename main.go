@@ -58,8 +58,49 @@ func main() {
 
 	println(countries["th"])
 	//using map get well
+	// map + add value to variables
+	// map_x,map_y := 10,20
+	// go map + if
+	country, ok := countries["jp"]
+	if ok {
+		println(country)
+	} else {
+		println("no value")
+	}
 
-	map_x,map_y := 10,20
+	// for loop
 
-	
+	loop_i := []int{1, 2, 3, 4, 5, 6}
+	for j := 0; j < len(loop_i); {
+		println(loop_i[j])
+
+		j++
+	}
+	// for range loop
+	loop_x := []int{10, 20, 30, 40, 50, 60}
+	for i, v := range loop_x {
+		println(v, i)
+	}
+	// i it is  index number of loop
+
+	//function
+	//using function sum
+	c, St, _ := sum(10, 20)
+	println(c, St)
+	// in advance function
+
+}
+
+// type function is int,string,bool
+func sum(a, b int) (int, string, bool) {
+	return a + b, "Hello, world!", true
+}
+func add(a, b int) int {
+	return a + b
+}
+func sub(a, b int) int {
+	return a - b
+}
+func hello(name string) string {
+	return "hello, world!" + name
 }
