@@ -102,8 +102,14 @@ func main() {
 	// if using hello function in cal function is not working
 	// using baladic function
 	va := []int{1, 2, 3, 4}
-	s := valadic(va)
-	println(s)
+	s := novaladic(va)
+	println(s) // it is normal function for loop add value slides
+
+	// if valadic function
+
+	va2 := valadic(1, 2, 3, 4, 5)
+	println(va2)
+
 }
 func cal(f func(int, int) int) {
 	sum := f(50, 10)
@@ -124,7 +130,15 @@ func hello(name string) string {
 	return "hello, world!" + name
 }
 
-func valadic(a []int) int {
+func novaladic(a []int) int {
+	s := 0
+	for _, v := range a {
+		s += v
+	}
+	return s
+}
+
+func valadic(a ...int) int {
 	s := 0
 	for _, v := range a {
 		s += v
