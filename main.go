@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"goBasic/customer"
 	"unicode/utf8"
 )
 
@@ -111,6 +112,8 @@ func main() {
 	println(va2)
 	//and fmt.Print
 	fmt.Printf("%v %v", 1, 2)
+	// calls package custom
+	println(customer.Hello())
 
 }
 func cal(f func(int, int) int) {
