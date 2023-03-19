@@ -109,6 +109,8 @@ func main() {
 
 	va2 := valadic(1, 2, 3, 4, 5)
 	println(va2)
+	//and fmt.Print
+	fmt.Printf("%v %v", 1, 2)
 
 }
 func cal(f func(int, int) int) {
