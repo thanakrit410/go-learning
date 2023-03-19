@@ -89,6 +89,25 @@ func main() {
 	println(c, St)
 	// in advance function
 
+	fx := func(a, b int) int { // it is annonamus of function
+		return a + b
+	}
+
+	result := fx(10, 20)
+	println(result)
+
+	//using cal function'
+	cal(add)
+	cal(sub)
+	// if using hello function in cal function is not working
+	// using baladic function
+	va := []int{1, 2, 3, 4}
+	s := valadic(va)
+	println(s)
+}
+func cal(f func(int, int) int) {
+	sum := f(50, 10)
+	println(sum)
 }
 
 // type function is int,string,bool
@@ -103,4 +122,12 @@ func sub(a, b int) int {
 }
 func hello(name string) string {
 	return "hello, world!" + name
+}
+
+func valadic(a []int) int {
+	s := 0
+	for _, v := range a {
+		s += v
+	}
+	return s
 }
